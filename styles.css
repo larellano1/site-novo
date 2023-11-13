@@ -1,0 +1,151 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 0;
+    font-style: italic;
+}
+
+
+/* Estilos para o menu */
+nav#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usa flexbox para alinhar os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    background-color: #333;
+    width: 100%; /* Ocupa toda a largura da tela */
+}
+
+nav#menu li {
+    padding: 14px 16px; /* Espaçamento ao redor dos itens do menu */
+}
+
+nav#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+nav#menu li a:hover {
+    background-color: #111;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 1rem;
+    padding: 1rem;
+    background: #fff;
+}
+
+#profile {
+    flex: 1;
+    padding: 1rem;
+    text-align: center; /* Centraliza a imagem caso seja menor que a largura da seção */
+}
+
+#profile img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%; /* Deixa a foto redonda */
+}
+
+#bio {
+    flex: 2;
+    padding: 1rem;
+}
+
+/* ... mais estilos ... */
+
+
+#bio, #publications {
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #fff;
+}
+
+#bio h2, #publications h2 {
+    color: #333;
+}
+
+.bio ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bio ul li a {
+    text-decoration: none;
+    color: #333;
+    background: #e7e7e7;
+    display: block;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.bio ul li a:hover {
+    background: #ddd;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+}
+
+footer a {
+    color: white; /* Cor do LinkedIn */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+footer a:hover {
+    color: #333; /* Cor ao passar o mouse */
+}
+
+footer i {
+    font-size: 24px; /* Tamanho do ícone */
+    margin-top: 0.5rem; /* Espaço acima do ícone */
+}
+
+.linkedin-icon {
+    background: #fff; /* Fundo branco */
+    border-radius: 50%; /* Faz o fundo ser redondo */
+    width: 40px; /* Largura do ícone */
+    height: 40px; /* Altura do ícone */
+    display: flex; /* Usa flexbox para centralizar o ícone */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.linkedin-icon i {
+    color: white; /* Cor do ícone do LinkedIn */
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+.fa-linkedin {
+    background: transparent !important;
+}
