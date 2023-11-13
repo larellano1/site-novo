@@ -73,7 +73,7 @@ nav#menu li a:hover {
     border-radius: 50%; /* Deixa a foto redonda */
 }
 
-#bio {
+#bio-academia {
     flex: 2;
     padding: 1rem;
 }
@@ -81,22 +81,21 @@ nav#menu li a:hover {
 /* ... mais estilos ... */
 
 
-#bio, #publications {
+#bio-academia, #bio-profissional, #publications {
     padding: 1rem;
     margin: 1rem 0;
     background: #fff;
 }
 
-#bio h2, #publications h2 {
+#bio-academia h2, #bio-profissional h2, #publications h2 {
     color: #333;
 }
 
-.bio ul {
-    list-style: none;
+#bio-academia ul, #bio-profissional ul {
     padding: 0;
 }
 
-.bio ul li a {
+#bio-academia ul li a, #bio-profissional ul li a {
     text-decoration: none;
     color: #333;
     background: #e7e7e7;
@@ -105,7 +104,7 @@ nav#menu li a:hover {
     margin-bottom: 0.5rem;
 }
 
-.bio ul li a:hover {
+#bio-academia ul li a:hover, #bio-profissional ul li a:hover {
     background: #ddd;
 }
 
