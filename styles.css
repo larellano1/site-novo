@@ -23,20 +23,58 @@ header p {
     font-style: italic;
 }
 
+/* Estilos para o botão do menu hambúrguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1rem;
+    
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Oculta o menu principal em telas menores e mostra o botão do menu hambúrguer */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav#menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav#menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* Estilos para quando o menu estiver ativo */
+nav#menu ul.active {
+    display: flex;
+}
+
 
 /* Estilos para o menu */
 nav#menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Usa flexbox para alinhar os itens */
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-direction: column; /* Empilha os itens em dispositivos móveis */
+    justify-content: center;
     background-color: #333;
-    width: 100%; /* Ocupa toda a largura da tela */
 }
 
 nav#menu li {
-    padding: 14px 16px; /* Espaçamento ao redor dos itens do menu */
+    padding: 14px 16px;
 }
 
 nav#menu li a {
@@ -44,68 +82,44 @@ nav#menu li a {
     color: white;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+    transition: background-color 0.3s;
 }
 
 nav#menu li a:hover {
     background-color: #111;
 }
 
-
 .container {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column; /* Empilha os elementos em dispositivos móveis */
+    align-items: center;
     margin: 1rem;
     padding: 1rem;
     background: #fff;
 }
 
-#profile {
-    flex: 1;
-    padding: 1rem;
-    text-align: center; /* Centraliza a imagem caso seja menor que a largura da seção */
-}
-
 #profile img {
-    max-width: 50%;
+    max-width: 80%; /* Ajusta a largura da imagem em dispositivos móveis */
     height: auto;
-    border-radius: 50%; /* Deixa a foto redonda */
-}
-
-#bio-academia {
-    flex: 2;
-    padding: 1rem;
+    border-radius: 50%;
 }
 
 /* ... mais estilos ... */
 
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    nav#menu ul {
+        flex-direction: row; /* Alinha os itens horizontalmente em telas maiores */
+    }
 
-#bio-academia, #bio-profissional, #publications {
-    padding: 1rem;
-    margin: 1rem 0;
-    background: #fff;
-}
+    .container {
+        flex-direction: row; /* Alinha os elementos horizontalmente em telas maiores */
+        justify-content: space-around;
+    }
 
-#bio-academia h2, #bio-profissional h2, #publications h2 {
-    color: #333;
-}
-
-#bio-academia ul, #bio-profissional ul {
-    padding: 0;
-}
-
-#bio-academia ul li a, #bio-profissional ul li a {
-    text-decoration: none;
-    color: #333;
-    background: #e7e7e7;
-    display: block;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-#bio-academia ul li a:hover, #bio-profissional ul li a:hover {
-    background: #ddd;
+    #profile img {
+        max-width: 50%;
+    }
 }
 
 footer {
@@ -116,33 +130,33 @@ footer {
 }
 
 footer a {
-    color: white; /* Cor do LinkedIn */
-    text-decoration: none; /* Remove o sublinhado do link */
+    color: white;
+    text-decoration: none;
 }
 
 footer a:hover {
-    color: #333; /* Cor ao passar o mouse */
+    color: #333;
 }
 
 footer i {
-    font-size: 24px; /* Tamanho do ícone */
-    margin-top: 0.5rem; /* Espaço acima do ícone */
+    font-size: 24px;
+    margin-top: 0.5rem;
 }
 
 .linkedin-icon {
-    background: #fff; /* Fundo branco */
-    border-radius: 50%; /* Faz o fundo ser redondo */
-    width: 40px; /* Largura do ícone */
-    height: 40px; /* Altura do ícone */
-    display: flex; /* Usa flexbox para centralizar o ícone */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    text-decoration: none; /* Remove o sublinhado do link */
+    background: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .linkedin-icon i {
-    color: white; /* Cor do ícone do LinkedIn */
-    font-size: 24px; /* Tamanho do ícone */
+    color: white;
+    font-size: 24px;
 }
 
 .fa-linkedin {
